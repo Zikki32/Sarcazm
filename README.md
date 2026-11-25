@@ -1,2 +1,2 @@
-# Sarcazm
+# sarkazm
 Хакатон тест таск
