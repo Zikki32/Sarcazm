@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Прозрачная вакансия</title>
+  <link rel="stylesheet" href="/web/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">ПВ</span>
+      <span class="brand-name">Прозрачная вакансия</span>
+      <span class="brand-sep">/</span>
+      <span class="brand-muted">регион 39</span>
+    </div>
+    <div class="topbar-right">
+      <span class="sync"><span class="dot" id="status-dot"></span><span id="data-status-text">загрузка…</span></span>
+      <label class="limit">Лимит <input id="run-limit" type="number" min="1" max="100" value="10" inputmode="numeric"></label>
+      <button class="btn-text" id="btn-check" type="button">Проверка</button>
+      <button class="btn-solid" id="btn-live" type="button">Живой прогон</button>
+      <button class="icon-btn" id="btn-refresh" type="button" title="Обновить данные" aria-label="Обновить данные">↻</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <h1>Понятность условий вакансий</h1>
+      <p id="summary-line">Загрузка данных…</p>
+    </section>
+
+    <div class="layout">
+      <section class="list-pane">
+        <div class="toolbar">
+          <input id="search" class="search" type="search" placeholder="Поиск по должности, компании или замечанию" autocomplete="off" aria-label="Поиск">
+          <nav class="filters" id="folders" aria-label="Фильтр">
+            <button class="filter active" data-folder="all" type="button">Все <span class="filter-count" id="count-all"></span></button>
+            <button class="filter" data-folder="good" type="button">Готовые <span class="filter-count" id="count-good"></span></button>
+            <button class="filter" data-folder="A" type="button">A</button>
+            <button class="filter" data-folder="B" type="button">B</button>
+            <button class="filter" data-folder="C" type="button">C</button>
+            <button class="filter" data-folder="D" type="button">D</button>
+          </nav>
+          <select id="sort" class="sort" aria-label="Сортировка">
+            <option value="score_desc">Лучшие</option>
+            <option value="score_asc">Худшие</option>
+            <option value="issues_desc">Замечания</option>
+            <option value="name_asc">По названию</option>
+          </select>
+        </div>
+
+        <div class="list" id="list" role="list"></div>
+        <div class="list-foot" id="list-count"></div>
+      </section>
+
+      <aside class="detail-pane" id="detail"></aside>
+    </div>
+  </main>
+
+  <div class="toast hidden" id="toast" role="status">
+    <span class="spinner" id="toast-spinner" aria-hidden="true"></span>
+    <span id="toast-text">Прогон…</span>
+    <button class="toast-link hidden" id="toast-log-btn" type="button">Лог</button>
+  </div>
+  <pre class="toast-log hidden" id="toast-log"></pre>
+
+  <script src="/web/app.js"></script>
+</body>
+</html>

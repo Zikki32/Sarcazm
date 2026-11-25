@@ -1,0 +1,22 @@
+# Секреты: настоящие ключи хранятся только локально и не попадают в репозиторий
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Служебные файлы прогонов
+logs/
+output/*.tmp
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,90 @@
+[
+  {
+    "vacancy_id": "f53dc178-6e20-11f1-a0ef-714ad8f097f6",
+    "url": "https://trudvsem.ru/vacancy/card/1023901014323/f53dc178-6e20-11f1-a0ef-714ad8f097f6",
+    "score": 77,
+    "grade": "B",
+    "job_name": "куратор цифровой трансформации",
+    "company": "КАЛИНИНГРАДСКИЙ ОБЛАСТНОЙ ИНСТИТУТ РАЗВИТИЯ ОБРАЗОВАНИЯ",
+    "region": "Калининградская область",
+    "salary": {
+      "min": 50000,
+      "max": 80000,
+      "currency": "RUB",
+      "raw": "от 50000"
+    },
+    "schedule": "Полный рабочий день",
+    "employment": "",
+    "locations": [
+      "Калининградская область, г Калининград, Томская улица, дом Д. 19"
+    ],
+    "issues": [
+      {
+        "topic": "employment_type",
+        "source_field": "employment",
+        "quote": "",
+        "issue_type": "missing",
+        "problem": "Не указан тип занятости (полная, частичная, проектная и т. п.).",
+        "recommendation": "Заполните поле employment, чтобы соискатель понимал объём и характер занятости.",
+        "detected_by": "rule"
+      }
+    ],
+    "penalties": [
+      {
+        "points": 8,
+        "reason": "Не указан тип занятости"
+      }
+    ],
+    "score_components": [
+      {
+        "key": "content",
+        "label": "Понятность описания",
+        "score": 92,
+        "weight": 0.5,
+        "weighted": 46.0,
+        "note": "100 − 8 штрафных баллов"
+      },
+      {
+        "key": "schedule",
+        "label": "График работы",
+        "score": 70,
+        "weight": 0.25,
+        "weighted": 17.5,
+        "note": "График описан общо: нет ни дней, ни часов работы."
+      },
+      {
+        "key": "salary",
+        "label": "Оплата к средней по региону",
+        "score": 53,
+        "weight": 0.25,
+        "weighted": 13.2,
+        "note": "Оплата 65 000 ₽ — 78% от средней по региону (83 200 ₽)."
+      }
+    ],
+    "schedule_analysis": {
+      "type": "standard",
+      "type_label": "Стандартная пятидневка",
+      "clarity": 50,
+      "comfort": 100,
+      "score": 70,
+      "days_specified": false,
+      "hours_specified": false,
+      "notes": [
+        "График описан общо: нет ни дней, ни часов работы.",
+        "Стандартный фиксированный график — понятная пятидневка."
+      ]
+    },
+    "salary_analysis": {
+      "value": 65000,
+      "benchmark": 83200,
+      "median": 70000,
+      "ratio": 0.781,
+      "score": 53,
+      "label": "ниже средней",
+      "notes": [
+        "Оплата 65 000 ₽ — 78% от средней по региону (83 200 ₽).",
+        "Медиана предлагаемых зарплат в Калининграде — 70 000 ₽."
+      ]
+    }
+  }
+]
